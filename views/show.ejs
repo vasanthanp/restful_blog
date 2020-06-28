@@ -1,0 +1,20 @@
+<%- include('partials/header') %>
+<div class="col-md-12 d-flex justify-content-center">
+<div class="col-md-7 mt-4">
+<div class="container card shadow-sm">
+    <h2><%= blog.title %></h2>
+    <img src="<%= blog.image %>" alt="blog-image" style="width: 100%;height:35vw" />
+    <div>
+        <p><%= blog.createdAt.toDateString() %></p>
+    </div>
+    <p><%- blog.body %></p>
+    <div class="d-flex justify-content-between mb-2" style="width: 300px;flex-wrap:wrap">
+    <a href="/blogs/<%= blog._id %>/edit" class="btn btn-outline-info px-5">Edit</a>
+    <form action="/blogs/<%= blog._id %>?_method=DELETE" method="POST" >
+    <button class="btn btn-outline-danger px-5">Delete</button>
+    </form>
+</div>
+</div>
+</div>
+</div>
+<%- include('partials/footer') %>

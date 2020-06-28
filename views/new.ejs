@@ -1,0 +1,24 @@
+<%- include('partials/header') %>
+<div class="container">
+<div class="container card shadow mt-5 ">
+  <h2>Post blog</h2>
+  <form action="/blogs" method="POST" class="form">
+    <div class="form-group">
+        <label>Title</label>
+      <input type="text" placeholder="Title" name="blog[title]" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label>Image</label>
+        <input type="text" placeholder="image" name="blog[image]" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label >Blog Content</label>
+        <textarea name="blog[body]" class="form-control" rows="5"></textarea>
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn btn-outline-dark " />
+    </div>
+  </form>
+</div>
+</div>
+<%- include('partials/footer') %>
